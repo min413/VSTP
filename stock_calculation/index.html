@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <p>
+        <b>현재 평균단가 : </b>
+        <input id="now_stock_price" class="inputText" 
+            type="text" placeholder="평균단가" pattern="[0-9]*" inputmode="numeric">
+        <b>$,원</b>
+    </p>
+    <p>
+        <b>현재 주식수량 : </b>
+        <input id="now_stocks" class="inputText" 
+            type="text" placeholder="주식수량" pattern="[0-9]*" inputmode="numeric">
+        <b>주</b>
+    </p>
+    <p>
+        <b>추가 매수단가 : </b>
+        <input id="add_stock_price" class="inputText" 
+            type="text" placeholder="추가 매수단가" pattern="[0-9]*" inputmode="numeric">
+        <b>$,원</b>
+    </p>
+    <p>
+        <b>추가 매수수량 : </b>
+        <input id="add_stocks" class="inputText" 
+            type="text" placeholder="추가 매수수량" pattern="[0-9]*" inputmode="numeric">
+        <b>주</b>
+    </p>
+    <p>
+        <button id="btn" onclick="calstocks()">결과보기</button>
+    </p>
+
+    <p id="result_page">
+        <b>
+        최종 평균단가 : 
+        <span id="result"></span>
+        <span>$,원</span>
+        <br>
+        최종 보유수량 : 
+        <span id="stocks"></span>
+        <span>주</span>
+        </b>
+    </p>
+    <script src="calculation.js"></script>
+</body>
+</html>
